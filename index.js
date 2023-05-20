@@ -6,7 +6,8 @@ const port=2000;
 
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
-app.enable('view cache');
+app.set ('views', __dirname + '/views');
+app.enable('views cache');
 
 app.use(express.static(__dirname + '/public'));
 
